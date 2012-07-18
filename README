@@ -1,0 +1,17 @@
+Some code that I tend to reuse when approaching natural language from Java. 
+Let me know if you find it useful and/or improvable. Some further readings that are partly based on this code:
+
+http://oerich.wordpress.com/
+
+Eric Knauss, Daniela Damian, Germán Poo-Caamaño, and Jane Cleland-Huang. 
+Detecting and classifying patterns of requirements clarifications. 
+In Proceedings of 20th International Requirements Engineering Conference (RE ’12), Chicago, USA, 2012.
+
+Eric Knauss, Siv Houmb, Kurt Schneider, Shareeful Islam, and Jan Jürjens. 
+Supporting Requirements Engineers in Recognising Security Issues. 
+In Daniel Berry and Xavier Franch, editors, 
+Proceedings of the 17th International Working Conference on Requirements Engineering: Foundation for Software Quality (REFSQ ’11), LNCS, Essen, Germany, 2011. Springer.
+
+Eric Knauss, Daniel Lübke, and Sebastian Meyer. 
+Feedback-driven requirements engineering: The Heuristic Requirements Assistant. 
+In Proceedings of the 31st International Conference on Software Engineering (ICSE ’09), pages 587–590, Vancouver, Canada, 2009. IEEE.
