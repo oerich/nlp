@@ -1,0 +1,1563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset dao="de.unihannover.se.nlputils.datamining.impl.NewXMLDataSetDAO" totalNumberOfSecurityRequirements="50" totalNumberOfNonSecurityRequirements="50">
+  <learnedWord name="need">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="total">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="using">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="covering">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="supports">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="creates">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="until">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="missing">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="over">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="time">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="transmissions">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="created">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="guaranteeing">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="host">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="loading">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="partial">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="transmission">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="header">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="acquirers">
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="aggregation">
+    <category name="nonsec" value="12" />
+  </learnedWord>
+  <learnedWord name="requested">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="1">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="multi">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="each">
+    <category name="sec" value="4" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="8">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="sequentially">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="relies">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="unique">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="installed">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="made">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="indicate">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="mac">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="7" />
+  </learnedWord>
+  <learnedWord name="aid">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="fraudulent">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="currency">
+    <category name="sec" value="4" />
+    <category name="nonsec" value="16" />
+  </learnedWord>
+  <learnedWord name="accommodate">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="locations">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="macs">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="left">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="ensure">
+    <category name="sec" value="9" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="may">
+    <category name="sec" value="5" />
+    <category name="nonsec" value="14" />
+  </learnedWord>
+  <learnedWord name="keys">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="needs">
+    <category name="sec" value="6" />
+  </learnedWord>
+  <learnedWord name="accepting">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="unlinked">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="taking">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="electronic">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="specifications">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="insufficient">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="history">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="altered">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="new">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="s">
+    <category name="sec" value="4" />
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="introduced">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="successful">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="public">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="cardholders">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="transactions">
+    <category name="sec" value="8" />
+    <category name="nonsec" value="30" />
+  </learnedWord>
+  <learnedWord name="least">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="exception">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="entity">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="same">
+    <category name="sec" value="7" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="long">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="completion">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="policies">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="balance">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="software">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="invalid">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="component">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="unlike">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="updated">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="any">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="optional">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="unencrypted">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="processing">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="purses">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="key">
+    <category name="sec" value="5" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="financial">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="environments">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="indicating">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="code">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="involved">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="maximum">
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="containing">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="distinguish">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="active">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="update">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="indicator">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="credited">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="set">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="legitimate">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="dealing">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="purchase">
+    <category name="sec" value="10" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="validations">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="through">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="analysis">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="business">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="response">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="following">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="pay">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="all">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="parallel">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="completing">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="enters">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="capable">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="securely">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="memory">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="message">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="which">
+    <category name="sec" value="6" />
+    <category name="nonsec" value="7" />
+  </learnedWord>
+  <learnedWord name="unloads">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="take">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="there">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="off">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="cardholder">
+    <category name="sec" value="5" />
+    <category name="nonsec" value="5" />
+  </learnedWord>
+  <learnedWord name="manner">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="issuers">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="they">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="no">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="verify">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="liability">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="psam">
+    <category name="sec" value="11" />
+    <category name="nonsec" value="13" />
+  </learnedWord>
+  <learnedWord name="determine">
+    <category name="nonsec" value="6" />
+  </learnedWord>
+  <learnedWord name="involve">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="receipt">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="permitted">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="errors">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="authenticity">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="given">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="correct">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="rejected">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="unsuccessful">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="only">
+    <category name="sec" value="5" />
+    <category name="nonsec" value="6" />
+  </learnedWord>
+  <learnedWord name="aggregated">
+    <category name="nonsec" value="7" />
+  </learnedWord>
+  <learnedWord name="activities">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="central">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="support">
+    <category name="nonsec" value="5" />
+  </learnedWord>
+  <learnedWord name="identify">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="done">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="destination">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="include">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="funds">
+    <category name="sec" value="6" />
+    <category name="nonsec" value="6" />
+  </learnedWord>
+  <learnedWord name="secures">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="verification">
+    <category name="sec" value="5" />
+    <category name="nonsec" value="7" />
+  </learnedWord>
+  <learnedWord name="session">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="decisions">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="performed">
+    <category name="sec" value="6" />
+  </learnedWord>
+  <learnedWord name="pays">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="counts">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="delivery">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="records">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="different">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="binary">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="closes">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="space">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="decision">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="algorithm">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="apparent">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="normally">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="remaining">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="unless">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="adjustment">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="supported">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="batches">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="adjust">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="completed">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="kept">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="collected">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="true">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="debited">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="nodes">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="account">
+    <category name="sec" value="4" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="method">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="capabilities">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="within">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="settle">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="design">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="last">
+    <category name="sec" value="5" />
+  </learnedWord>
+  <learnedWord name="count">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="integrity">
+    <category name="sec" value="4" />
+  </learnedWord>
+  <learnedWord name="being">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="authorization">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="since">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="type">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="every">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="counterfeit">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="procedures">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="prior">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="more">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="request">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="analyzed">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="value">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="investigation">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="required">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="flexibility">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="presumption">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="onto">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="approve">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="authentic">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="controlled">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="arrangement">
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="flag">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="amounts">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="issuer">
+    <category name="sec" value="37" />
+    <category name="nonsec" value="35" />
+  </learnedWord>
+  <learnedWord name="permanent">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="issues">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="owner">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="incremental">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="included">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="scope">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="adjusting">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="add">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="validating">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="affect">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="requirements">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="network">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="forwards">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="sends">
+    <category name="sec" value="4" />
+  </learnedWord>
+  <learnedWord name="online">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="authenticate">
+    <category name="sec" value="10" />
+  </learnedWord>
+  <learnedWord name="selected">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="rate">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="reauthenticate">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="resolved">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="allows">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="able">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="if">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="12" />
+  </learnedWord>
+  <learnedWord name="suspect">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="receive">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="between">
+    <category name="sec" value="6" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="application">
+    <category name="nonsec" value="5" />
+  </learnedWord>
+  <learnedWord name="added">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="validation">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="5" />
+  </learnedWord>
+  <learnedWord name="into">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="agreement">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="problem">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="enciphered">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="database">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="section">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="balances">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="pass">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="opportunity">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="unloaded">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="pin">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="7" />
+  </learnedWord>
+  <learnedWord name="implementation">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="removed">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="necessary">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="totals">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="step">
+    <category name="sec" value="5" />
+  </learnedWord>
+  <learnedWord name="passed">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="maintain">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="determines">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="received">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="flow">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="its">
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="passes">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="validated">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="validate">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="pos">
+    <category name="sec" value="9" />
+    <category name="nonsec" value="20" />
+  </learnedWord>
+  <learnedWord name="merchants">
+    <category name="nonsec" value="6" />
+  </learnedWord>
+  <learnedWord name="approved">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="scheme">
+    <category name="nonsec" value="9" />
+  </learnedWord>
+  <learnedWord name="forward">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="place">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="elements">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="option">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="signature">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="validates">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="duplicates">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="under">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="available">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="intermediate">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="log">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="corrupted">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="system">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="prerequisite">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="own">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="load">
+    <category name="sec" value="27" />
+    <category name="nonsec" value="13" />
+  </learnedWord>
+  <learnedWord name="indicates">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="specify">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="devices">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="fails">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="common">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="data">
+    <category name="sec" value="9" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="use">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="logged">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="collection">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="document">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="agreements">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="depending">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="sensitive">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="direct">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="payment">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="13" />
+  </learnedWord>
+  <learnedWord name="cancellation">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="implemented">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="settlement">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="rates">
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="cannot">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="relationship">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="institute">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="either">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="presence">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="part">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="decrease">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="reflect">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="unload">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="6" />
+  </learnedWord>
+  <learnedWord name="detail">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="both">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="provide">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="withdrawn">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="cancel">
+    <category name="sec" value="4" />
+  </learnedWord>
+  <learnedWord name="perform">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="cvmi">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="must">
+    <category name="sec" value="14" />
+    <category name="nonsec" value="45" />
+  </learnedWord>
+  <learnedWord name="amount">
+    <category name="sec" value="6" />
+    <category name="nonsec" value="6" />
+  </learnedWord>
+  <learnedWord name="after">
+    <category name="sec" value="4" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="card">
+    <category name="sec" value="60" />
+    <category name="nonsec" value="50" />
+  </learnedWord>
+  <learnedWord name="timing">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="arrangements">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="presented">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="follow">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="networks">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="shared">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="loads">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="control">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="however">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="generates">
+    <category name="sec" value="4" />
+  </learnedWord>
+  <learnedWord name="dispute">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="ceps">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="providing">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="intended">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="diversified">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="vary">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="inform">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="failure">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="generated">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="than">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="cash">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="due">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="require">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="case">
+    <category name="sec" value="5" />
+  </learnedWord>
+  <learnedWord name="result">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="valid">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="currencies">
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="acknowledge">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="can">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="generate">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="outlined">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="flagged">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="well">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="re">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="malfunctioning">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="facility">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="complete">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="repository">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="above">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="s5">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="multiple">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="s6">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="s3">
+    <category name="sec" value="5" />
+  </learnedWord>
+  <learnedWord name="institution">
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="s4">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="s2">
+    <category name="sec" value="4" />
+  </learnedWord>
+  <learnedWord name="s1">
+    <category name="sec" value="7" />
+  </learnedWord>
+  <learnedWord name="provides">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="provider">
+    <category name="nonsec" value="5" />
+  </learnedWord>
+  <learnedWord name="variety">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="positions">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="liabilities">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="authentication">
+    <category name="sec" value="8" />
+  </learnedWord>
+  <learnedWord name="device">
+    <category name="sec" value="16" />
+    <category name="nonsec" value="11" />
+  </learnedWord>
+  <learnedWord name="increase">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="certain">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="very">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="out">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="personalized">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="aggregate">
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="accept">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="bring">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="whether">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="transmitted">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="accepted">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="initiated">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="exchange">
+    <category name="sec" value="5" />
+    <category name="nonsec" value="11" />
+  </learnedWord>
+  <learnedWord name="information">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="problems">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="form">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="like">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="without">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="create">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="non">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="not">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="10" />
+  </learnedWord>
+  <learnedWord name="record">
+    <category name="nonsec" value="7" />
+  </learnedWord>
+  <learnedWord name="clearable">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="locked">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="adjusted">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="some">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="outside">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="bytes">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="remove">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="additionally">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="line">
+    <category name="sec" value="8" />
+    <category name="nonsec" value="9" />
+  </learnedWord>
+  <learnedWord name="finally">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="acquirer">
+    <category name="sec" value="12" />
+    <category name="nonsec" value="24" />
+  </learnedWord>
+  <learnedWord name="offline">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="according">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="dual">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="identity">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="paid">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="cep">
+    <category name="sec" value="12" />
+    <category name="nonsec" value="13" />
+  </learnedWord>
+  <learnedWord name="establishes">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="end">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="rely">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="signed">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="correctly">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="establish">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="established">
+    <category name="nonsec" value="7" />
+  </learnedWord>
+  <learnedWord name="already">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="stored">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="should">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="process">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="fluctuations">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="leg">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="encrypted">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="mutual">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="successfully">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="acknowledged">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="calculates">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="based">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="4" />
+  </learnedWord>
+  <learnedWord name="decides">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="allowed">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="canceled">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="preclude">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="purse">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="transaction">
+    <category name="sec" value="23" />
+    <category name="nonsec" value="25" />
+  </learnedWord>
+  <learnedWord name="functional">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="used">
+    <category name="sec" value="9" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="sent">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="linked">
+    <category name="nonsec" value="5" />
+  </learnedWord>
+  <learnedWord name="cards">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="systems">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="connection">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="except">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="forwarded">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="7" />
+  </learnedWord>
+  <learnedWord name="format">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="deleted">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="default">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="presentation">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="batch">
+    <category name="sec" value="6" />
+    <category name="nonsec" value="13" />
+  </learnedWord>
+  <learnedWord name="contain">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="monetary">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="management">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="allow">
+    <category name="sec" value="4" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="increased">
+    <category name="nonsec" value="2" />
+  </learnedWord>
+  <learnedWord name="specific">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="one">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="because">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="another">
+    <category name="sec" value="3" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="share">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="protected">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="during">
+    <category name="sec" value="4" />
+  </learnedWord>
+  <learnedWord name="pool">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="resubmission">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="notify">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="slot">
+    <category name="sec" value="2" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="acceptance">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="exist">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="reversal">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="error">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="merchant">
+    <category name="sec" value="4" />
+    <category name="nonsec" value="30" />
+  </learnedWord>
+  <learnedWord name="acknowledgment">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="authenticated">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="lock">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="signatures">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="addition">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="rules">
+    <category name="nonsec" value="5" />
+  </learnedWord>
+  <learnedWord name="manual">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="assigning">
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="authenticates">
+    <category name="sec" value="2" />
+  </learnedWord>
+  <learnedWord name="specification">
+    <category name="sec" value="1" />
+    <category name="nonsec" value="1" />
+  </learnedWord>
+  <learnedWord name="guarantee">
+    <category name="sec" value="1" />
+  </learnedWord>
+  <learnedWord name="secret">
+    <category name="sec" value="3" />
+  </learnedWord>
+  <learnedWord name="assume">
+    <category name="nonsec" value="3" />
+  </learnedWord>
+  <learnedWord name="their">
+    <category name="nonsec" value="5" />
+  </learnedWord>
+  <learnedWord name="first">
+    <category name="sec" value="1" />
+  </learnedWord>
+</dataset>
+
