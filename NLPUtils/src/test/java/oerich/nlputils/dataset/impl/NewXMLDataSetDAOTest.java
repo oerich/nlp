@@ -1,4 +1,4 @@
-package test.java.oerich.nlputils.dataset.impl;
+package oerich.nlputils.dataset.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -10,12 +10,10 @@ import java.util.List;
 import oerich.nlputils.NLPInitializationException;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
-import oerich.nlputils.dataset.impl.NewXMLDataSetDAO;
 import oerich.nlputils.text.IStemmer;
 
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class NewXMLDataSetDAOTest {
 
@@ -75,36 +73,37 @@ public class NewXMLDataSetDAOTest {
 				+ getClass().getSimpleName() + ".xml"));
 		assertTrue(this.dataSetDAO.checkFileFormat("testfiles/secReq.xml"));
 	}
-	
+
 	@Test
 	public void testSetStemmer() throws NLPInitializationException {
 		IStemmer stemmer = new IStemmer() {
-			
+
 			@Override
 			public List<String> stemmWords(List<String> words) {
 				// TODO Auto-generated method stub
 				return null;
 			}
-			
+
 			@Override
 			public String[] stemmWords(String[] words) {
 				// TODO Auto-generated method stub
 				return null;
 			}
-			
+
 			@Override
 			public String stemmWord(String word) {
 				// TODO Auto-generated method stub
 				return null;
 			}
-			
+
 			@Override
 			public String stemmText(String text) {
 				// TODO Auto-generated method stub
 				return null;
 			}
 		};
-		IDataSet dataSet = this.dataSetDAO.createDataSet("testfiles/ePurse-dataset.xml", stemmer);
+		IDataSet dataSet = this.dataSetDAO.createDataSet(
+				"testfiles/ePurse-dataset.xml", stemmer);
 		assertEquals(stemmer, dataSet.getStemmer());
 	}
 }

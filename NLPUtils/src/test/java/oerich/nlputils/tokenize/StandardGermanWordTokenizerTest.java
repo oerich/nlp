@@ -1,9 +1,6 @@
-package test.java.oerich.nlputils.tokenize;
+package oerich.nlputils.tokenize;
 
 import static org.junit.Assert.assertEquals;
-
-import oerich.nlputils.tokenize.ITokenizer;
-import oerich.nlputils.tokenize.StandardGermanWordTokenizer;
 
 import org.junit.Test;
 

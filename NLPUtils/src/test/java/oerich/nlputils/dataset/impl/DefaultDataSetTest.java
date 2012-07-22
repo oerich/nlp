@@ -1,16 +1,13 @@
-package test.java.oerich.nlputils.dataset.impl;
+package oerich.nlputils.dataset.impl;
 
 import static org.junit.Assert.assertEquals;
-
 import oerich.nlputils.NLPInitializationException;
 import oerich.nlputils.dataset.IDataSet;
-import oerich.nlputils.dataset.impl.DefaultDataSet;
 import oerich.nlputils.text.IStemmer;
 import oerich.nlputils.text.StopWordFilterFactory;
 
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class DefaultDataSetTest {
 
@@ -30,8 +27,8 @@ public class DefaultDataSetTest {
 	@Test
 	public void testDelegates() throws NLPInitializationException {
 		assertEquals(IStemmer.NULL_STEMMER, dataSet.getStemmer());
-		assertEquals(StopWordFilterFactory.getInstance(), dataSet
-				.getStopWordFilter());
+		assertEquals(StopWordFilterFactory.getInstance(),
+				dataSet.getStopWordFilter());
 	}
 
 	@Test
@@ -49,8 +46,7 @@ public class DefaultDataSetTest {
 	}
 
 	@Test
-	public void testGetMostLikelyStereotype()
-			throws NLPInitializationException {
+	public void testGetMostLikelyStereotype() throws NLPInitializationException {
 		assertEquals("not known", dataSet.getMostLikelyStereotype("test"));
 		dataSet.addSecValue("test", 7);
 		assertEquals("not known", dataSet.getMostLikelyStereotype("test"));
@@ -78,7 +74,6 @@ public class DefaultDataSetTest {
 		assertEquals(3, dataSet.getCountSecReq());
 		assertEquals(0, dataSet.getCountNonSecReq());
 	}
-
 
 	@Test
 	public void testCountSecNonSec() {

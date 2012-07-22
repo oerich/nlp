@@ -1,17 +1,12 @@
-package test.java.oerich.nlputils.dataset;
+package oerich.nlputils.dataset;
 
 import static org.junit.Assert.assertEquals;
-
 import oerich.nlputils.NLPInitializationException;
-import oerich.nlputils.dataset.IDataSet;
-import oerich.nlputils.dataset.IDataSetDAO;
-import oerich.nlputils.dataset.TrainDataSetCommand;
 import oerich.nlputils.text.IStemmer;
 import oerich.nlputils.text.StopWordFilterFactory;
 
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class TrainDataSetCommandTest {
 

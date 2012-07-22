@@ -1,5 +1,4 @@
-package test.java.oerich.nlputils.dataset.impl;
-
+package oerich.nlputils.dataset.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -9,12 +8,10 @@ import java.io.File;
 import oerich.nlputils.NLPInitializationException;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
-import oerich.nlputils.dataset.impl.StandardXMLDataSetDAO;
 import oerich.nlputils.text.IStemmer;
 
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class StandardXMLDataSetDAOTest {
 
@@ -27,10 +24,9 @@ public class StandardXMLDataSetDAOTest {
 	}
 
 	@Test(expected = NLPInitializationException.class)
-	public void testWithNonExistingDataSet()
-			throws NLPInitializationException {
-		this.dataSetDAO.createDataSet(
-				"Test_" + getClass().getSimpleName() + ".xlm", IStemmer.NULL_STEMMER);
+	public void testWithNonExistingDataSet() throws NLPInitializationException {
+		this.dataSetDAO.createDataSet("Test_" + getClass().getSimpleName()
+				+ ".xlm", IStemmer.NULL_STEMMER);
 	}
 
 	@SuppressWarnings("deprecation")
@@ -55,7 +51,8 @@ public class StandardXMLDataSetDAOTest {
 
 		File f = new File(databaseFileName);
 		// assertFalse(f.exists());
-		StandardXMLDataSetDAO.STANDARD_XML.storeDataSet(databaseFileName, dataSet);
+		StandardXMLDataSetDAO.STANDARD_XML.storeDataSet(databaseFileName,
+				dataSet);
 		assertTrue(f.exists());
 
 		IDataSet dataSet2 = StandardXMLDataSetDAO.STANDARD_XML.createDataSet(

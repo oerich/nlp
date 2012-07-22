@@ -1,18 +1,14 @@
-package test.java.oerich.nlputils.classifier;
+package oerich.nlputils.classifier;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-
 import oerich.nlputils.NLPInitializationException;
-import oerich.nlputils.classifier.GroundedBayesianFilter;
-import oerich.nlputils.classifier.IBayesianFilter;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 import oerich.nlputils.text.StopWordFilterFactory;
 import oerich.nlputils.tokenize.ITokenizer;
 
 import org.junit.Test;
-
 
 public class GroundedBayesianFilterTest {
 

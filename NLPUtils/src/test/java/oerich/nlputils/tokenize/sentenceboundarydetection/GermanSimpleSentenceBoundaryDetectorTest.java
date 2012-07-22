@@ -1,4 +1,4 @@
-package test.java.oerich.nlputils.tokenize.sentenceboundarydetection;
+package oerich.nlputils.tokenize.sentenceboundarydetection;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -6,8 +6,6 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.util.Locale;
-
-import oerich.nlputils.tokenize.sentenceboundarydetection.SimpleSentenceBoundaryDetector;
 
 import org.junit.Test;
 

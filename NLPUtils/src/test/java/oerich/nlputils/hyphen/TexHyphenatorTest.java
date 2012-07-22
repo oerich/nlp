@@ -1,12 +1,10 @@
-package test.java.oerich.nlputils.hyphen;
+package oerich.nlputils.hyphen;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
-import oerich.nlputils.hyphen.TexHyphenator;
 
 import org.junit.Before;
 import org.junit.Test;

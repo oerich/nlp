@@ -1,15 +1,11 @@
-package test.java.oerich.nlputils.text;
+package oerich.nlputils.text;
 
 import static org.junit.Assert.assertEquals;
-
-import oerich.nlputils.text.DefaultStopWordFilter;
-import oerich.nlputils.text.StopWordFilterFactory;
 import oerich.nlputils.tokenize.DefaultWordTokenizer;
 import oerich.nlputils.tokenize.ITokenizer;
 
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class DefaultStopWordFilterTest {
 

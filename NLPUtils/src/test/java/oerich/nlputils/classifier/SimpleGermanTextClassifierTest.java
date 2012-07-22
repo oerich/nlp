@@ -1,12 +1,10 @@
-package test.java.oerich.nlputils.classifier;
+package oerich.nlputils.classifier;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import javax.swing.table.TableModel;
-
-import oerich.nlputils.classifier.SimpleGermanTextClassifier;
 
 import org.junit.Before;
 import org.junit.Test;

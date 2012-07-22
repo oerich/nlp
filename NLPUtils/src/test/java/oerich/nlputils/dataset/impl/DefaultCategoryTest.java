@@ -1,9 +1,6 @@
-package test.java.oerich.nlputils.dataset.impl;
-
+package oerich.nlputils.dataset.impl;
 
 import static org.junit.Assert.assertEquals;
-
-import oerich.nlputils.dataset.impl.DefaultLearnedWord;
 
 import org.junit.Before;
 import org.junit.Test;

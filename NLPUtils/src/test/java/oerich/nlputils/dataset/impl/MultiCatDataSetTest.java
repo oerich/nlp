@@ -1,15 +1,12 @@
-package test.java.oerich.nlputils.dataset.impl;
+package oerich.nlputils.dataset.impl;
 
 import static org.junit.Assert.assertEquals;
-
-import oerich.nlputils.dataset.impl.MultiCatDataSet;
 import oerich.nlputils.text.IStemmer;
 import oerich.nlputils.text.Stemmer;
 import oerich.nlputils.text.StopWordFilterFactory;
 
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class MultiCatDataSetTest {
 
@@ -32,20 +29,20 @@ public class MultiCatDataSetTest {
 
 	@Test
 	public void testGetSetStopWordFilter() {
-		assertEquals(StopWordFilterFactory.NULL_FILTER, this.dataSet
-				.getStopWordFilter());
+		assertEquals(StopWordFilterFactory.NULL_FILTER,
+				this.dataSet.getStopWordFilter());
 		this.dataSet.setStopWordFilter(null);
-		assertEquals(StopWordFilterFactory.NULL_FILTER, this.dataSet
-				.getStopWordFilter());
+		assertEquals(StopWordFilterFactory.NULL_FILTER,
+				this.dataSet.getStopWordFilter());
 		this.dataSet.setStopWordFilter(StopWordFilterFactory.getInstance());
-		assertEquals(StopWordFilterFactory.getInstance(), this.dataSet
-				.getStopWordFilter());
+		assertEquals(StopWordFilterFactory.getInstance(),
+				this.dataSet.getStopWordFilter());
 	}
 
 	@Test
 	public void testAddValue() {
 		assertEquals(0, this.dataSet.getValue("Neu", "Test"));
-		
+
 		this.dataSet.addValue("Neu", 1, "Test");
 		assertEquals(1, this.dataSet.getWords().length);
 		assertEquals("Neu", this.dataSet.getWords()[0]);
@@ -58,7 +55,7 @@ public class MultiCatDataSetTest {
 		assertEquals(2, this.dataSet.getCategories("Neu").length);
 		assertEquals("Test", this.dataSet.getCategories("Neu")[0]);
 		assertEquals("Test2", this.dataSet.getCategories("Neu")[1]);
-		
+
 		assertEquals(2, this.dataSet.getValue("Neu", "Test2"));
 		assertEquals(1, this.dataSet.getValue("Neu", "Test"));
 	}
@@ -95,7 +92,9 @@ public class MultiCatDataSetTest {
 	public void testLearn() {
 		assertEquals(0, this.dataSet.getValue("system", "Test"));
 		String teststring = "The system shall learn categories from categorized requirements.";
-		this.dataSet.learn(StopWordFilterFactory.NULL_TOKENIZER.tokenize(teststring), "Test");
+		this.dataSet.learn(
+				StopWordFilterFactory.NULL_TOKENIZER.tokenize(teststring),
+				"Test");
 		assertEquals(1, this.dataSet.getValue("system", "Test"));
 
 		assertEquals(8, this.dataSet.getWords().length);
@@ -104,7 +103,7 @@ public class MultiCatDataSetTest {
 		assertEquals(1, this.dataSet.getNumberOfLearnedItemsInCategory("Test"));
 		assertEquals(0, this.dataSet.getNumberOfLearnedItemsInCategory("Test1"));
 		assertEquals(1, this.dataSet.getTotalNumberOfLearnedItems());
-		
+
 	}
 
 }

@@ -55,7 +55,7 @@
 		<developerConnection>scm:git:https://github.com/oerich/nlp.git</developerConnection>
 		<url>https://github.com/oerich/nlp</url>
 	</scm>
-	
+
 	<issueManagement>
 		<url>https://github.com/oerich/nlp/issues</url>
 	</issueManagement>
@@ -109,6 +109,12 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>3.1</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

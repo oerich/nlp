@@ -1,10 +1,7 @@
-package test.java.oerich.nlputils.text;
+package oerich.nlputils.text;
 
 import java.util.LinkedList;
 import java.util.List;
-
-import oerich.nlputils.text.IStemmer;
-import oerich.nlputils.text.Stemmer;
 
 import junit.framework.TestCase;
 

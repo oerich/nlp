@@ -1,4 +1,4 @@
-package test.java.oerich.nlputils.classifier.machinelearning;
+package oerich.nlputils.classifier.machinelearning;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -11,8 +11,6 @@ import java.io.FileReader;
 import javax.swing.table.TableModel;
 
 import oerich.nlputils.NLPInitializationException;
-import oerich.nlputils.classifier.machinelearning.ILearningClassifier;
-import oerich.nlputils.classifier.machinelearning.NewBayesianClassifier;
 
 import org.junit.After;
 import org.junit.Before;

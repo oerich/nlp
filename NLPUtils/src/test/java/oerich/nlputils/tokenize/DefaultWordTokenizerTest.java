@@ -1,13 +1,10 @@
-package test.java.oerich.nlputils.tokenize;
+package oerich.nlputils.tokenize;
 
 import static org.junit.Assert.assertEquals;
-
 import oerich.nlputils.text.StopWordFilterFactory;
-import oerich.nlputils.tokenize.DefaultWordTokenizer;
 
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class DefaultWordTokenizerTest {
 

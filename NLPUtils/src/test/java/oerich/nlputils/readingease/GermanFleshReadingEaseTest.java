@@ -1,13 +1,10 @@
-package test.java.oerich.nlputils.readingease;
+package oerich.nlputils.readingease;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
 import oerich.nlputils.hyphen.TexHyphenator;
-import oerich.nlputils.readingease.GermanFleshReadingEase;
 
 import org.junit.Before;
 import org.junit.Test;
-
 
 public class GermanFleshReadingEaseTest {
 
@@ -20,8 +17,10 @@ public class GermanFleshReadingEaseTest {
 
 	@Test
 	public void testCalculateReadingEaseForSentence() {
-		assertEquals(100.0d, this.readingEase
-				.calculateReadingEaseForSentence("Dies ist ein einfacher Text"));
+		assertEquals(
+				100.0d,
+				this.readingEase
+						.calculateReadingEaseForSentence("Dies ist ein einfacher Text"));
 		assertEquals(
 				54.31d,
 				(Double) this.readingEase
@@ -55,16 +54,18 @@ public class GermanFleshReadingEaseTest {
 				"Weder im Requirements Engineering noch im Erfahrungsmanagement gibt es einen einheitlichen Sprachgebrauch.",
 				"Vielmehr existieren verschiedene Schulen, von denen selbst zentrale Begriffe widersprüchlich verwendet werden.",
 				"Als Grundlage für diese Arbeit liefert dieses Kapitel zwei Dinge:" };
-		assertEquals(25.85d, (Double) this.readingEase
-				.calculateReadingEaseForParagraph(paragraph), 0.01d);
+		assertEquals(25.85d,
+				(Double) this.readingEase
+						.calculateReadingEaseForParagraph(paragraph), 0.01d);
 
 		paragraph = new String[] {
 				"Weder im Requirements Engineering noch im Erfahrungsmanagement gibt es einen einheitlichen Sprachgebrauch.",
 				"Vielmehr existieren verschiedene Schulen, von denen selbst zentrale Begriffe widersprüchlich verwendet werden.",
 				"Als Grundlage für diese Arbeit liefert dieses Kapitel zwei Dinge:",
 				"" };
-		assertEquals(25.85d, (Double) this.readingEase
-				.calculateReadingEaseForParagraph(paragraph), 0.01d);
+		assertEquals(25.85d,
+				(Double) this.readingEase
+						.calculateReadingEaseForParagraph(paragraph), 0.01d);
 	}
 
 	@Test
@@ -77,10 +78,14 @@ public class GermanFleshReadingEaseTest {
 				+ "Vielmehr existieren verschiedene Schulen, von denen selbst zentrale Begriffe widersprüchlich verwendet werden."
 				+ "Als Grundlage für diese Arbeit liefert dieses Kapitel zwei Dinge:";
 
-		assertEquals("Para has good readability for a scientific text.",25.85d, (Double) this.readingEase
-				.calculateReadingEaseForParagraph(paragraph), 0.01d);
-		assertEquals("Funny, but for a sentence, this is very long.",-0.078125d, (Double) this.readingEase
-				.calculateReadingEaseForSentence(sentence), 0.01d);
-		
+		assertEquals("Para has good readability for a scientific text.",
+				25.85d,
+				(Double) this.readingEase
+						.calculateReadingEaseForParagraph(paragraph), 0.01d);
+		assertEquals("Funny, but for a sentence, this is very long.",
+				-0.078125d,
+				(Double) this.readingEase
+						.calculateReadingEaseForSentence(sentence), 0.01d);
+
 	}
 }

@@ -1,15 +1,12 @@
-package test.java.oerich.nlputils.classifier;
+package oerich.nlputils.classifier;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
-import oerich.nlputils.classifier.TFxIDF;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 
 import org.junit.Test;
-
 
 public class TFxIDFTest {
 
@@ -22,10 +19,12 @@ public class TFxIDFTest {
 				"Anforderung" }, "nonsec");
 		TFxIDF classifier = new TFxIDF();
 		classifier.init(dataSet);
-		assertEquals("sec(4.0)", classifier
-				.computeTFxIDF("Benutzer meldet sich mit Passwort an"));
-		assertEquals("nonsec(-2.0)", classifier
-				.computeTFxIDF("Benutzer hat eine normale Anforderung"));
+		assertEquals("sec(4.0)",
+				classifier
+						.computeTFxIDF("Benutzer meldet sich mit Passwort an"));
+		assertEquals("nonsec(-2.0)",
+				classifier
+						.computeTFxIDF("Benutzer hat eine normale Anforderung"));
 	}
 
 	@Test
@@ -43,10 +42,12 @@ public class TFxIDFTest {
 				"Passworts", "geschützt" }, "sec");
 		TFxIDF classifier = new TFxIDF();
 		classifier.init(dataSet);
-		assertEquals("nonsec(-2.0)", classifier
-				.computeTFxIDF("Benutzer meldet sich mit Passwort an"));
-		assertEquals("nonsec(-2.0)", classifier
-				.computeTFxIDF("Benutzer hat eine normale Anforderung"));
+		assertEquals("nonsec(-2.0)",
+				classifier
+						.computeTFxIDF("Benutzer meldet sich mit Passwort an"));
+		assertEquals("nonsec(-2.0)",
+				classifier
+						.computeTFxIDF("Benutzer hat eine normale Anforderung"));
 		assertEquals(
 				"sec(6.0)",
 				classifier
@@ -69,10 +70,12 @@ public class TFxIDFTest {
 		TFxIDF classifier = new TFxIDF();
 		classifier.init(dataSet);
 
-		assertEquals(-2.0, classifier
-				.classify("Benutzer meldet sich mit Passwort an"), 0.001);
-		assertEquals(-2.0, classifier
-				.classify("Benutzer hat eine normale Anforderung"), 0.001);
+		assertEquals(-2.0,
+				classifier.classify("Benutzer meldet sich mit Passwort an"),
+				0.001);
+		assertEquals(-2.0,
+				classifier.classify("Benutzer hat eine normale Anforderung"),
+				0.001);
 		assertEquals(
 				6.0,
 				classifier

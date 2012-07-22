@@ -1,9 +1,6 @@
-package test.java.oerich.nlputils.text;
-
+package oerich.nlputils.text;
 
 import static org.junit.Assert.assertEquals;
-
-import oerich.nlputils.text.WagnerFisherStringSearch;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +13,6 @@ public class WagnerFisherStringSearchTest {
 	public void setUp() throws Exception {
 		this.wagnerFisher = new WagnerFisherStringSearch();
 	}
-
 
 	@Test
 	public void testSimpleCases() {
