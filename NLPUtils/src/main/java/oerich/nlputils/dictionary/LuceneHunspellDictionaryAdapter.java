@@ -13,14 +13,14 @@ import org.apache.lucene.util.Version;
 /**
  * Adapter to {@link org.apache.lucene.analysis.hunspell.HunspellDictionary}.
  * 
- * @author Philipp Förmer
+ * @author Philipp FÃ¶rmer
  * @see org.apache.lucene.analysis.hunspell.HunspellDictionary
  * @see http://en.wikipedia.org/wiki/Hunspell
  * @see http://wiki.services.openoffice.org/wiki/Dictionaries
  */
 public class LuceneHunspellDictionaryAdapter implements Dictionary {
 
-	private HunspellDictionary adaptedDictionary;
+	private final HunspellDictionary adaptedDictionary;
 
 	/**
 	 * @param dictionaryResourcePath
@@ -33,8 +33,8 @@ public class LuceneHunspellDictionaryAdapter implements Dictionary {
 	 * @throws ParseException
 	 *             if the dictionary or affix could not be parsed
 	 */
-	public LuceneHunspellDictionaryAdapter(String dictionaryResourcePath,
-			String affixResourcePath) throws IOException, ParseException {
+	public LuceneHunspellDictionaryAdapter(final String dictionaryResourcePath,
+			final String affixResourcePath) throws IOException, ParseException {
 		this(IOUtil.getResourceAsStream(dictionaryResourcePath), IOUtil
 				.getResourceAsStream(affixResourcePath));
 	}
@@ -52,8 +52,8 @@ public class LuceneHunspellDictionaryAdapter implements Dictionary {
 	 * @throws ParseException
 	 *             if the dictionary or affix could not be parsed
 	 */
-	public LuceneHunspellDictionaryAdapter(String dictionaryResourcePath,
-			String affixResourcePath, boolean caseSensitive)
+	public LuceneHunspellDictionaryAdapter(final String dictionaryResourcePath,
+			final String affixResourcePath, final boolean caseSensitive)
 			throws IOException, ParseException {
 		this(IOUtil.getResourceAsStream(dictionaryResourcePath), IOUtil
 				.getResourceAsStream(affixResourcePath), caseSensitive);
@@ -70,8 +70,8 @@ public class LuceneHunspellDictionaryAdapter implements Dictionary {
 	 * @throws ParseException
 	 *             if the dictionary or affix could not be parsed
 	 */
-	public LuceneHunspellDictionaryAdapter(InputStream dictionary,
-			InputStream affix) throws IOException, ParseException {
+	public LuceneHunspellDictionaryAdapter(final InputStream dictionary,
+			final InputStream affix) throws IOException, ParseException {
 		this(dictionary, affix, false);
 	}
 
@@ -88,19 +88,26 @@ public class LuceneHunspellDictionaryAdapter implements Dictionary {
 	 * @throws ParseException
 	 *             if the dictionary or affix could not be parsed
 	 */
-	public LuceneHunspellDictionaryAdapter(InputStream dictionary,
-			InputStream affix, boolean caseSensitive) throws IOException,
-			ParseException {
+	public LuceneHunspellDictionaryAdapter(final InputStream dictionary,
+			final InputStream affix, final boolean caseSensitive)
+			throws IOException, ParseException {
 		Validate.notNull(dictionary);
 		Validate.notNull(affix);
-		adaptedDictionary = new HunspellDictionary(
-				IOUtil.decorateAsBufferedInputStream(dictionary),
-				IOUtil.decorateAsBufferedInputStream(affix), Version.LUCENE_36,
+		adaptedDictionary = createHunspellDictionary(dictionary, affix,
 				caseSensitive);
 	}
 
+	protected HunspellDictionary createHunspellDictionary(
+			final InputStream dictionary, final InputStream affix,
+			final boolean caseSensitive) throws IOException, ParseException {
+		return new HunspellDictionary(
+				IOUtil.decorateAsBufferedInputStream(affix),
+				IOUtil.decorateAsBufferedInputStream(dictionary),
+				Version.LUCENE_36, !caseSensitive);
+	}
+
 	@Override
-	public boolean isCorrectSpelled(String word) {
+	public boolean isCorrectSpelled(final String word) {
 		return word != null
 				&& adaptedDictionary.lookupWord(word.toCharArray(), 0,
 						word.length()) != null;
