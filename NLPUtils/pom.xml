@@ -40,6 +40,10 @@
 		<developer>
 			<name>Eric Knauss</name>
 			<timezone>Canada/Pacific</timezone>
+			<roles>
+				<role>Project owner</role>
+				<role>Lead developer</role>
+			</roles>
 		</developer>
 	</developers>
 
@@ -106,6 +110,12 @@
 
 		<!-- Test dependencies -->
 		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.10</version>
@@ -120,6 +130,15 @@
 	</dependencies>
 
 	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>cobertura-maven-plugin</artifactId>
+					<version>2.5.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

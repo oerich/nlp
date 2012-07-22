@@ -3,6 +3,7 @@ package oerich.nlputils.text;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.tokenize.DefaultWordTokenizer;
 
 import org.junit.Test;
@@ -12,9 +13,11 @@ public class StopWordFilterFactoryTest {
 	@Test
 	public void testCreateInstance() {
 		DefaultStopWordFilter filter = (DefaultStopWordFilter) StopWordFilterFactory
-				.createStopWordFilter("./stopwords.txt");
+				.createStopWordFilter(TestEnvironmentConstants.RESOURCE_PATH_NAME
+						+ "stopwords.txt");
 		DefaultWordTokenizer tokenizer = (DefaultWordTokenizer) StopWordFilterFactory
-				.createTokenizer("./stopsign2.txt");
+				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
+						+ "stopsign2.txt");
 
 		assertNotNull(filter);
 		assertNotNull(tokenizer);

@@ -7,6 +7,8 @@ import static org.junit.Assert.fail;
 
 import java.io.IOException;
 
+import oerich.nlputils.TestEnvironmentConstants;
+
 import org.junit.Test;
 
 /**
@@ -16,7 +18,8 @@ import org.junit.Test;
  */
 public class GermanMaximumEntropySentenceBoundaryDetectorTest {
 
-	private static final String MODEL_FILE_PATH = "src/oerich/nlputils/resource/sentenceModel.bin.gz";
+	private static final String MODEL_FILE_PATH = TestEnvironmentConstants.RESOURCE_PATH_NAME
+			+ "oerich/nlputils/resource/sentenceModel.bin.gz";
 
 	public GermanMaximumEntropySentenceBoundaryDetectorTest() {
 

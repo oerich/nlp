@@ -11,7 +11,9 @@ import java.io.FileReader;
 import javax.swing.table.TableModel;
 
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.TestEnvironmentConstants;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -171,13 +173,13 @@ public class NewBayesianClassifierTest {
 	@Test
 	public void testSecreqCPN() throws Exception {
 		NewBayesianClassifier classifier = new NewBayesianClassifier();
-		File dataset = new File("testfiles/CPN-dataset.txt");
+		File dataset = new File(FileUtils.getTempDirectory(), "CPN-dataset.txt");
 		dataset.delete();
 		classifier.init(dataset);
 
 		// Load the requirements from file
 		BufferedReader r = new BufferedReader(new FileReader(
-				"testfiles/CPN.csv"));
+				TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME + "CPN.csv"));
 		String line = r.readLine();
 
 		// Train the classifier
@@ -202,13 +204,15 @@ public class NewBayesianClassifierTest {
 	@Test
 	public void testSecReqHomeNetwork() throws Exception {
 		NewBayesianClassifier classifier = new NewBayesianClassifier();
-		File dataset = new File("testfiles/homeNetwork-dataset.txt");
+		File dataset = new File(FileUtils.getTempDirectory(),
+				"homeNetwork-dataset.txt");
 		dataset.delete();
 		classifier.init(dataset);
 
 		// Load the requirements from file
 		BufferedReader r = new BufferedReader(new FileReader(
-				"testfiles/homeNetwork-complete.csv"));
+				TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+						+ "homeNetwork-complete.csv"));
 		String line = r.readLine();
 
 		// Train the classifier

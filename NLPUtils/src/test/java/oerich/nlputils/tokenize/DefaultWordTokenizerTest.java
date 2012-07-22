@@ -1,6 +1,7 @@
 package oerich.nlputils.tokenize;
 
 import static org.junit.Assert.assertEquals;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.text.StopWordFilterFactory;
 
 import org.junit.Before;
@@ -15,7 +16,8 @@ public class DefaultWordTokenizerTest {
 	@Test
 	public void testDefaultFilter() {
 		DefaultWordTokenizer t = (DefaultWordTokenizer) StopWordFilterFactory
-				.createTokenizer("./stopsign2.txt");
+				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
+						+ "stopsign2.txt");
 
 		String txt = "This.is a File with\n some; \t funny signs.";
 		String[] tokens = t.tokenize(txt);

@@ -8,6 +8,7 @@ import java.io.File;
 import java.util.List;
 
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 import oerich.nlputils.text.IStemmer;
@@ -47,7 +48,8 @@ public class NewXMLDataSetDAOTest {
 		assertEquals(3, dataSet.getCountSecReq());
 		assertEquals(1, dataSet.getCountNonSecReq());
 
-		String databaseFileName = "testfiles/Test_NewDataSet.xml";
+		String databaseFileName = TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+				+ "Test_NewDataSet.xml";
 
 		File f = new File(databaseFileName);
 		// assertFalse(f.exists());
@@ -68,10 +70,14 @@ public class NewXMLDataSetDAOTest {
 	@Test
 	public void testCheckFile() {
 		assertFalse(this.dataSetDAO
-				.checkFileFormat("testfiles/Test_EmptyDataSet.xml"));
-		assertFalse(this.dataSetDAO.checkFileFormat("testfiles/Test_"
-				+ getClass().getSimpleName() + ".xml"));
-		assertTrue(this.dataSetDAO.checkFileFormat("testfiles/secReq.xml"));
+				.checkFileFormat(TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+						+ "Test_EmptyDataSet.xml"));
+		assertFalse(this.dataSetDAO
+				.checkFileFormat(TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+						+ "Test_" + getClass().getSimpleName() + ".xml"));
+		assertTrue(this.dataSetDAO
+				.checkFileFormat(TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+						+ "secReq.xml"));
 	}
 
 	@Test
@@ -103,7 +109,8 @@ public class NewXMLDataSetDAOTest {
 			}
 		};
 		IDataSet dataSet = this.dataSetDAO.createDataSet(
-				"testfiles/ePurse-dataset.xml", stemmer);
+				TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+						+ "ePurse-dataset.xml", stemmer);
 		assertEquals(stemmer, dataSet.getStemmer());
 	}
 }

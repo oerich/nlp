@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 import oerich.nlputils.text.IStemmer;
@@ -34,7 +35,8 @@ public class StandardXMLDataSetDAOTest {
 	public void testWriteDataSet() throws NLPInitializationException {
 
 		IDataSet dataSet = StandardXMLDataSetDAO.STANDARD_XML.createDataSet(
-				"testfiles/Test_EmptyDataSet.xml", IStemmer.NULL_STEMMER);
+				TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+						+ "Test_EmptyDataSet.xml", IStemmer.NULL_STEMMER);
 		String[] sentence = { "user", "logs", "in", "with", "username", "and",
 				"password" };
 		String[] sentence2 = { "user", "logs", "in", "with", "browser", "via",
@@ -47,7 +49,8 @@ public class StandardXMLDataSetDAOTest {
 		assertEquals(3, dataSet.getCountSecReq());
 		assertEquals(0, dataSet.getCountNonSecReq());
 
-		String databaseFileName = "testfiles/Test_NewDataSet.xml";
+		String databaseFileName = TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+				+ "Test_NewDataSet.xml";
 
 		File f = new File(databaseFileName);
 		// assertFalse(f.exists());

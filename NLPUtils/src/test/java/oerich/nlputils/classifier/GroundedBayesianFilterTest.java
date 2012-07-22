@@ -3,6 +3,7 @@ package oerich.nlputils.classifier;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 import oerich.nlputils.text.StopWordFilterFactory;
@@ -50,7 +51,8 @@ public class GroundedBayesianFilterTest {
 	@Test
 	public void testEPurse() throws NLPInitializationException {
 		IDataSet dataSet = IDataSetDAO.NEW_XML
-				.createDataSet("testfiles/ePurse-dataset.xml");
+				.createDataSet(TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+						+ "ePurse-dataset.xml");
 
 		IBayesianFilter testFilter = new GroundedBayesianFilter();
 		testFilter.setDataSet(dataSet);

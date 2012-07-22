@@ -9,6 +9,7 @@ import static org.junit.Assert.fail;
 import javax.swing.table.TableModel;
 
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 import oerich.nlputils.text.StopWordFilterFactory;
@@ -84,7 +85,8 @@ public class BayesianFilterTest {
 	@Test
 	public void testEPurse() throws NLPInitializationException {
 		IDataSet dataSet = IDataSetDAO.NEW_XML
-				.createDataSet("testfiles/ePurse-dataset.xml");
+				.createDataSet(TestEnvironmentConstants.TEST_RESOURCE_PATH_NAME
+						+ "ePurse-dataset.xml");
 
 		BayesianFilter testFilter = new BayesianFilter();
 		testFilter.setDataSet(dataSet);

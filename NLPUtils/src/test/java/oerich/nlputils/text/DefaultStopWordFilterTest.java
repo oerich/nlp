@@ -1,6 +1,7 @@
 package oerich.nlputils.text;
 
 import static org.junit.Assert.assertEquals;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.tokenize.DefaultWordTokenizer;
 import oerich.nlputils.tokenize.ITokenizer;
 
@@ -35,9 +36,12 @@ public class DefaultStopWordFilterTest {
 	@Test
 	public void testComplexExample() {
 		DefaultStopWordFilter filter = (DefaultStopWordFilter) StopWordFilterFactory
-				.createStopWordFilter("./stopwords.txt");
+				.createStopWordFilter(TestEnvironmentConstants.RESOURCE_PATH_NAME
+						+ "stopwords.txt");
 
-		ITokenizer t = StopWordFilterFactory.createTokenizer("./stopsign2.txt");
+		ITokenizer t = StopWordFilterFactory
+				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
+						+ "stopsign2.txt");
 		String[] s = filter.filterStopWords(t
 				.tokenize("Satz mit einigen \"Stopwörtern\""));
 		// for (String w : s)
