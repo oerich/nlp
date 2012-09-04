@@ -3,12 +3,27 @@ package oerich.nlputils.classifier;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import oerich.nlputils.NLPProperties;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TFxIDFTest {
+
+	@Before
+	public void setup() {
+		NLPProperties.getInstance().setResourcePath(
+				TestEnvironmentConstants.RESOURCE_PATH_NAME);
+	}
+
+	@After
+	public void tearDown() {
+		NLPProperties.getInstance().resetToDefault();
+	}
 
 	@Test
 	public void testComputeTFxIDF() throws Exception {

@@ -2,10 +2,13 @@ package oerich.nlputils.dataset.impl;
 
 import static org.junit.Assert.assertEquals;
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.NLPProperties;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.text.IStemmer;
 import oerich.nlputils.text.StopWordFilterFactory;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +18,14 @@ public class DefaultDataSetTest {
 
 	@Before
 	public void setup() {
+		NLPProperties.getInstance().setResourcePath(
+				TestEnvironmentConstants.RESOURCE_PATH_NAME);
 		this.dataSet = new DefaultDataSet();
+	}
+
+	@After
+	public void tearDown() {
+		NLPProperties.getInstance().resetToDefault();
 	}
 
 	@Test

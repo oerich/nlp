@@ -9,15 +9,36 @@ import static org.junit.Assert.fail;
 import javax.swing.table.TableModel;
 
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.NLPProperties;
 import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 import oerich.nlputils.text.StopWordFilterFactory;
 import oerich.nlputils.tokenize.ITokenizer;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class BayesianFilterTest {
+
+	private ITokenizer tokenizer;
+	private IDataSet dataSet;
+
+	@Before
+	public void setup() {
+		NLPProperties.getInstance().setResourcePath(
+				TestEnvironmentConstants.RESOURCE_PATH_NAME);
+		dataSet = IDataSetDAO.NEW_XML.createDataSet();
+		tokenizer = StopWordFilterFactory
+				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
+						+ "stopsign2.txt");
+	}
+
+	@After
+	public void tearDown() {
+		NLPProperties.getInstance().resetToDefault();
+	}
 
 	@Test
 	public void testBasics() {
@@ -38,19 +59,19 @@ public class BayesianFilterTest {
 
 	@Test
 	public void seriousTest() {
-		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
+		tokenizer = StopWordFilterFactory.createTokenizer();
 
-		ITokenizer t = StopWordFilterFactory.createTokenizer();
-
-		dataSet.learn(t.tokenize("User logs in with username and password."),
-				"sec");
-		dataSet.learn(t.tokenize("User sends private data via internet."),
+		dataSet.learn(
+				tokenizer.tokenize("User logs in with username and password."),
 				"sec");
 		dataSet.learn(
-				t.tokenize("User add creditcard number to user profile."),
+				tokenizer.tokenize("User sends private data via internet."),
 				"sec");
-		dataSet.learn(t.tokenize("User writes comments."), "nonsec");
-		dataSet.learn(t.tokenize("System displays current time."), "nonsec");
+		dataSet.learn(tokenizer
+				.tokenize("User add creditcard number to user profile."), "sec");
+		dataSet.learn(tokenizer.tokenize("User writes comments."), "nonsec");
+		dataSet.learn(tokenizer.tokenize("System displays current time."),
+				"nonsec");
 
 		BayesianFilter testFilter = new BayesianFilter();
 		testFilter.setDataSet(dataSet);
@@ -116,21 +137,21 @@ public class BayesianFilterTest {
 
 	@Test
 	public void testNaN() {
-		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
-		ITokenizer t = StopWordFilterFactory.createTokenizer("./stopsign2.txt");
-
-		dataSet.learn(t.tokenize("User logs in with username and password."),
-				"sec");
-		dataSet.learn(t.tokenize("User sends private data via internet."),
+		dataSet.learn(
+				tokenizer.tokenize("User logs in with username and password."),
 				"sec");
 		dataSet.learn(
-				t.tokenize("User add creditcard number to user profile."),
+				tokenizer.tokenize("User sends private data via internet."),
 				"sec");
-		dataSet.learn(t.tokenize("User writes comments."), "nonsec");
-		dataSet.learn(t.tokenize("System displays current time."), "nonsec");
+		dataSet.learn(tokenizer
+				.tokenize("User add creditcard number to user profile."), "sec");
+		dataSet.learn(tokenizer.tokenize("User writes comments."), "nonsec");
+		dataSet.learn(tokenizer.tokenize("System displays current time."),
+				"nonsec");
 
 		dataSet.learn(
-				t.tokenize("We can use other category names but should not be surprised if this is not useful for classifying sec-reqs."),
+				tokenizer
+						.tokenize("We can use other category names but should not be surprised if this is not useful for classifying sec-reqs."),
 				"xyz");
 
 		BayesianFilter testFilter = new BayesianFilter();
@@ -182,19 +203,17 @@ public class BayesianFilterTest {
 
 	@Test
 	public void testProSecBias() {
-		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
-
-		ITokenizer t = StopWordFilterFactory.createTokenizer("./stopsign2.txt");
-
-		dataSet.learn(t.tokenize("User logs in with username and password."),
-				"sec");
-		dataSet.learn(t.tokenize("User sends private data via internet."),
+		dataSet.learn(
+				tokenizer.tokenize("User logs in with username and password."),
 				"sec");
 		dataSet.learn(
-				t.tokenize("User add creditcard number to user profile."),
+				tokenizer.tokenize("User sends private data via internet."),
 				"sec");
-		dataSet.learn(t.tokenize("User writes comments."), "nonsec");
-		dataSet.learn(t.tokenize("System displays current time."), "nonsec");
+		dataSet.learn(tokenizer
+				.tokenize("User add creditcard number to user profile."), "sec");
+		dataSet.learn(tokenizer.tokenize("User writes comments."), "nonsec");
+		dataSet.learn(tokenizer.tokenize("System displays current time."),
+				"nonsec");
 
 		BayesianFilter testFilter = new BayesianFilter();
 		testFilter.setDataSet(dataSet);
@@ -213,11 +232,8 @@ public class BayesianFilterTest {
 
 	@Test
 	public void testExplain() throws Exception {
-		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
-
-		ITokenizer t = StopWordFilterFactory.createTokenizer("./stopsign2.txt");
-
-		dataSet.learn(t.tokenize("User logs in with username and password."),
+		dataSet.learn(
+				tokenizer.tokenize("User logs in with username and password."),
 				"sec");
 
 		BayesianFilter testFilter = new BayesianFilter();
@@ -236,11 +252,8 @@ public class BayesianFilterTest {
 
 	@Test
 	public void testWithMatchValue() {
-		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
-
-		ITokenizer t = StopWordFilterFactory.createTokenizer("./stopsign2.txt");
-
-		dataSet.learn(t.tokenize("User logs in with username and password."),
+		dataSet.learn(
+				tokenizer.tokenize("User logs in with username and password."),
 				"sec");
 
 		BayesianFilter bf = new BayesianFilter();
@@ -264,11 +277,8 @@ public class BayesianFilterTest {
 
 	@Test
 	public void testSetUnknownWordValue() {
-		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
-
-		ITokenizer t = StopWordFilterFactory.createTokenizer("./stopsign2.txt");
-
-		dataSet.learn(t.tokenize("User logs in with username and password."),
+		dataSet.learn(
+				tokenizer.tokenize("User logs in with username and password."),
 				"sec");
 
 		BayesianFilter bf = new BayesianFilter();

@@ -1,10 +1,13 @@
 package oerich.nlputils.dataset.impl;
 
 import static org.junit.Assert.assertEquals;
+import oerich.nlputils.NLPProperties;
+import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.text.IStemmer;
 import oerich.nlputils.text.Stemmer;
 import oerich.nlputils.text.StopWordFilterFactory;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,7 +17,14 @@ public class MultiCatDataSetTest {
 
 	@Before
 	public void setUp() throws Exception {
+		NLPProperties.getInstance().setResourcePath(
+				TestEnvironmentConstants.RESOURCE_PATH_NAME);
 		this.dataSet = new MultiCatDataSet();
+	}
+
+	@After
+	public void tearDown() {
+		NLPProperties.getInstance().resetToDefault();
 	}
 
 	@Test

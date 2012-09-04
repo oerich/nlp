@@ -101,7 +101,7 @@ public class GermanFleshReadingEase implements IReadingEase {
 				wordCount++;
 				syllableCount += this.hyphenator.syllableCount(term);
 
-				System.out.println(term + "(words:"+wordCount + ",syllables:"+syllableCount);
+				// System.out.println(term + "(words:"+wordCount + ",syllables:"+syllableCount);
 			}
 
 		}

@@ -1,18 +1,30 @@
 package oerich.nlputils.dataset;
 
 import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
+
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.NLPProperties;
 import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.text.IStemmer;
 import oerich.nlputils.text.StopWordFilterFactory;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class TrainDataSetCommandTest {
 
 	@Before
-	public void setUp() throws Exception {
+	public void setup() {
+		NLPProperties.getInstance().setResourcePath(
+				TestEnvironmentConstants.RESOURCE_PATH_NAME);
+	}
+
+	@After
+	public void tearDown() {
+		NLPProperties.getInstance().resetToDefault();
 	}
 
 	@SuppressWarnings("deprecation")
@@ -35,8 +47,12 @@ public class TrainDataSetCommandTest {
 		cmd.setDataSet(dataSet);
 
 		cmd.run();
-		assertEquals(771, dataSet.getWords().length);
-		assertEquals("approving", dataSet.getWords()[0]);
+		String[] words = dataSet.getWords();
+		Arrays.sort(words);
+		for (String w : words)
+			System.out.println(w);
+		assertEquals(771, words.length);
+		assertEquals("approving", words[0]);
 		assertEquals(1, dataSet.getCategories("approving").length);
 		assertEquals("nonsec", dataSet.getCategories("approving")[0]);
 		assertEquals(0, dataSet.getSecValue("approving"));

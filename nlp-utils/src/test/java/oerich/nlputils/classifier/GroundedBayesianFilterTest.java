@@ -3,15 +3,29 @@ package oerich.nlputils.classifier;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.NLPProperties;
 import oerich.nlputils.TestEnvironmentConstants;
 import oerich.nlputils.dataset.IDataSet;
 import oerich.nlputils.dataset.IDataSetDAO;
 import oerich.nlputils.text.StopWordFilterFactory;
 import oerich.nlputils.tokenize.ITokenizer;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class GroundedBayesianFilterTest {
+
+	@Before
+	public void setup() {
+		NLPProperties.getInstance().setResourcePath(
+				TestEnvironmentConstants.RESOURCE_PATH_NAME);
+	}
+
+	@After
+	public void tearDown() {
+		NLPProperties.getInstance().resetToDefault();
+	}
 
 	@Test
 	public void seriousTest() {
@@ -83,7 +97,9 @@ public class GroundedBayesianFilterTest {
 	@Test
 	public void testNaN() {
 		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
-		ITokenizer t = StopWordFilterFactory.createTokenizer("./stopsign2.txt");
+		ITokenizer t = StopWordFilterFactory
+				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
+						+ "stopsign2.txt");
 
 		dataSet.learn(t.tokenize("User logs in with username and password."),
 				"sec");

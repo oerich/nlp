@@ -11,6 +11,7 @@ import java.io.FileReader;
 import javax.swing.table.TableModel;
 
 import oerich.nlputils.NLPInitializationException;
+import oerich.nlputils.NLPProperties;
 import oerich.nlputils.TestEnvironmentConstants;
 
 import org.apache.commons.io.FileUtils;
@@ -25,6 +26,8 @@ public class NewBayesianClassifierTest {
 
 	@Before
 	public void setUp() throws Exception {
+		NLPProperties.getInstance().setResourcePath(
+				TestEnvironmentConstants.RESOURCE_PATH_NAME);
 		tempFile = new File("TEST-NewBayesianClassifierTest.tmp");
 		this.classifier = new NewBayesianClassifier();
 		this.classifier.init(tempFile);
@@ -33,6 +36,7 @@ public class NewBayesianClassifierTest {
 	@After
 	public void tearDown() {
 		assertTrue(tempFile.delete());
+		NLPProperties.getInstance().resetToDefault();
 	}
 
 	@Test
@@ -152,7 +156,7 @@ public class NewBayesianClassifierTest {
 		}
 		r.close();
 
-		assertEquals(26, lines);
+		assertEquals(25, lines);
 
 		classifier.clear();
 
