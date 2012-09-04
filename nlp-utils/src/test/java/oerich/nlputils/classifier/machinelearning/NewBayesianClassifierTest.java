@@ -152,7 +152,7 @@ public class NewBayesianClassifierTest {
 		}
 		r.close();
 
-		assertEquals(25, lines);
+		assertEquals(26, lines);
 
 		classifier.clear();
 

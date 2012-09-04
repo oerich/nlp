@@ -4,8 +4,8 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * Manages the internatiolization. Basically we try to support english and
- * german.
+ * Manages the internatiolization. Basically we try to support English and
+ * German.
  * 
  * @author Eric Knauss
  * 
