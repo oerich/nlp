@@ -1,7 +1,9 @@
 package oerich.nlputils.text;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,8 +11,6 @@ import oerich.nlputils.NLPProperties;
 import oerich.nlputils.tokenize.AbstractTokenizerAdapter;
 import oerich.nlputils.tokenize.DefaultWordTokenizer;
 import oerich.nlputils.tokenize.ITokenizer;
-
-
 
 // TODO the factory is mixed up with the implementation. This has to be cleaned up.
 public final class StopWordFilterFactory extends AbstractTokenizerAdapter
@@ -42,8 +42,11 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 		stopsign = new LinkedList<String>();
 		try {
 			// stop words
-			reader = new BufferedReader(new FileReader(NLPProperties
-					.getInstance().getStopwordFilePath()));
+			// reader = new BufferedReader(new FileReader(NLPProperties
+			// .getInstance().getStopwordFilePath()));
+			reader = new BufferedReader(new InputStreamReader(
+					new FileInputStream(NLPProperties.getInstance()
+							.getStopwordFilePath()), Charset.forName("UTF-8")));
 			String line = "";
 
 			while ((line = reader.readLine()) != null) {
@@ -55,8 +58,11 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 			reader.close();
 
 			// stop sign
-			reader = new BufferedReader(new FileReader(NLPProperties
-					.getInstance().getStopsignsFilePath()));
+			// reader = new BufferedReader(new FileReader(NLPProperties
+			// .getInstance().getStopsignsFilePath()));
+			reader = new BufferedReader(new InputStreamReader(
+					new FileInputStream(NLPProperties.getInstance()
+							.getStopsignsFilePath()), Charset.forName("UTF-8")));
 			line = "";
 
 			while ((line = reader.readLine()) != null) {
@@ -70,7 +76,7 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 
 	/**
 	 * Returns a stopword filter. Mostly used for tests. You could always use
-	 * the methods of this class instead.
+	 * the methods of this class instead. We are expecting UTF-8.
 	 * 
 	 * @param filename
 	 *            name of a file with a list of stopwords. Consider to retrieve
@@ -81,7 +87,11 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 		try {
 			DefaultStopWordFilter ret = new DefaultStopWordFilter();
 			List<String> stopwords = new LinkedList<String>();
-			BufferedReader reader = new BufferedReader(new FileReader(filename));
+			// BufferedReader reader = new BufferedReader(new
+			// FileReader(filename));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					new FileInputStream(filename), Charset.forName("UTF-8")));
+
 			String line = "";
 
 			while ((line = reader.readLine()) != null) {
@@ -117,7 +127,10 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 		try {
 			DefaultWordTokenizer ret = new DefaultWordTokenizer();
 			List<String> stopsigns = new LinkedList<String>();
-			BufferedReader reader = new BufferedReader(new FileReader(filename));
+			// BufferedReader reader = new BufferedReader(new
+			// FileReader(filename));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					new FileInputStream(filename), Charset.forName("UTF-8")));
 			String line = "";
 
 			while ((line = reader.readLine()) != null) {

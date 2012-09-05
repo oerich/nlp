@@ -1,9 +1,6 @@
 package oerich.nlputils.dataset;
 
 import static org.junit.Assert.assertEquals;
-
-import java.util.Arrays;
-
 import oerich.nlputils.NLPInitializationException;
 import oerich.nlputils.NLPProperties;
 import oerich.nlputils.TestEnvironmentConstants;
@@ -48,9 +45,9 @@ public class TrainDataSetCommandTest {
 
 		cmd.run();
 		String[] words = dataSet.getWords();
-		Arrays.sort(words);
-		for (String w : words)
-			System.out.println(w);
+		// Arrays.sort(words);
+		// for (String w : words)
+		// System.out.println(w);
 		assertEquals(771, words.length);
 		assertEquals("approving", words[0]);
 		assertEquals(1, dataSet.getCategories("approving").length);

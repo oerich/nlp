@@ -1,12 +1,13 @@
 package oerich.nlputils.dataset;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 
 import oerich.nlputils.text.IStopWordFilter;
 import oerich.nlputils.text.StopWordFilterFactory;
 import oerich.nlputils.tokenize.ITokenizer;
-
 
 public class TrainDataSetCommand {
 
@@ -41,8 +42,8 @@ public class TrainDataSetCommand {
 
 	public void run() {
 		try {
-			BufferedReader reader = new BufferedReader(
-					new FileReader(this.file));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					new FileInputStream(this.file), Charset.forName("UTF-8")));
 			String line = "";
 			while ((line = reader.readLine()) != null) {
 				String[] reqCatType = line.split(";");
