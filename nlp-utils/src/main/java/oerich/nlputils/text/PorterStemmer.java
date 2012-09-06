@@ -378,10 +378,10 @@ public class PorterStemmer {
 			str = str.toLowerCase();
 			str = Clean(str);
 
-			if ((str != "") && (str.length() > 2)) {
+			if ((!"".equals(str)) && (str.length() > 2)) {
 				str = stripPrefixes(str);
 
-				if (str != "") {
+				if (!"".equals(str)) {
 					str = stripSuffixes(str);
 				}
 			}

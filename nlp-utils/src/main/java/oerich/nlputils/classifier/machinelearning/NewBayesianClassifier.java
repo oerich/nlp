@@ -284,12 +284,16 @@ public class NewBayesianClassifier implements ILearningClassifier {
 		recalculateBayesValues();
 	}
 
-	private IStemmer getStemmer() {
+	public IStemmer getStemmer() {
 		if (this.stemmer == null)
-			return IStemmer.NULL_STEMMER;
+			this.stemmer = IStemmer.NULL_STEMMER;
 		return this.stemmer;
 	}
 
+	public void setStemmer(IStemmer stemmer) {
+		this.stemmer = stemmer;
+	}
+	
 	@Override
 	public void learnNotInClass(String text) {
 		// remember the amount of things in class:
