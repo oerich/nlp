@@ -17,7 +17,7 @@ public class StopWordFilterFactoryTest {
 						+ "stopwords.txt");
 		DefaultWordTokenizer tokenizer = (DefaultWordTokenizer) StopWordFilterFactory
 				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
-						+ "stopsign2.txt");
+						+ "stopsigns.txt");
 
 		assertNotNull(filter);
 		assertNotNull(tokenizer);

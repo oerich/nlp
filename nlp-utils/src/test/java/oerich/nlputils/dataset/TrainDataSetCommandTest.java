@@ -32,7 +32,7 @@ public class TrainDataSetCommandTest {
 				+ "reqs-sec.txt");
 		cmd.setTokenizer(StopWordFilterFactory
 				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
-						+ "stopsign2.txt"));
+						+ "stopsigns.txt"));
 		cmd.setFilter(StopWordFilterFactory
 				.createStopWordFilter(TestEnvironmentConstants.RESOURCE_PATH_NAME
 						+ "stopwords.txt"));
@@ -79,7 +79,7 @@ public class TrainDataSetCommandTest {
 				+ "reqs-sec.txt");
 		cmd.setTokenizer(StopWordFilterFactory
 				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
-						+ "stopsign2.txt"));
+						+ "stopsigns.txt"));
 
 		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
 

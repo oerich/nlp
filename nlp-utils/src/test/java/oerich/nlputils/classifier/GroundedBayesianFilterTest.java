@@ -99,7 +99,7 @@ public class GroundedBayesianFilterTest {
 		IDataSet dataSet = IDataSetDAO.NEW_XML.createDataSet();
 		ITokenizer t = StopWordFilterFactory
 				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
-						+ "stopsign2.txt");
+						+ "stopsigns.txt");
 
 		dataSet.learn(t.tokenize("User logs in with username and password."),
 				"sec");

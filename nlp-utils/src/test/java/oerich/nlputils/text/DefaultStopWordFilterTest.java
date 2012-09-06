@@ -41,7 +41,7 @@ public class DefaultStopWordFilterTest {
 
 		ITokenizer t = StopWordFilterFactory
 				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
-						+ "stopsign2.txt");
+						+ "stopsigns.txt");
 		String[] s = filter.filterStopWords(t
 				.tokenize("Satz mit einigen \"Stopwörtern\""));
 		// for (String w : s)

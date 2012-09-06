@@ -17,7 +17,7 @@ public class DefaultWordTokenizerTest {
 	public void testDefaultFilter() {
 		DefaultWordTokenizer t = (DefaultWordTokenizer) StopWordFilterFactory
 				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
-						+ "stopsign2.txt");
+						+ "stopsigns.txt");
 
 		String txt = "This.is a File with\n some; \t funny signs.";
 		String[] tokens = t.tokenize(txt);

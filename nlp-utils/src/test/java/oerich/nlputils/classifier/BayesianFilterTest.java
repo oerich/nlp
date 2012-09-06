@@ -32,7 +32,7 @@ public class BayesianFilterTest {
 		dataSet = IDataSetDAO.NEW_XML.createDataSet();
 		tokenizer = StopWordFilterFactory
 				.createTokenizer(TestEnvironmentConstants.RESOURCE_PATH_NAME
-						+ "stopsign2.txt");
+						+ "stopsigns.txt");
 	}
 
 	@After

@@ -17,7 +17,7 @@ public class NLPProperties {
 
 	public void resetToDefault() {
 		setStopwordsFileName("stopwords.txt");
-		setStopsignsFileName("stopsign2.txt");
+		setStopsignsFileName("stopsigns.txt");
 		setResourcePath("./");
 	}
 
