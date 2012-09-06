@@ -15,7 +15,7 @@ import org.junit.Test;
  */
 public class IOUtilTest {
 
-	private static final String existingResource = "stopsign.txt";
+	private static final String existingResource = "stopsigns.txt";
 
 	@Test
 	public void testGetResourceAsStream() throws Exception {
