@@ -23,7 +23,6 @@ import oerich.nlputils.text.StopWordFilterFactory;
 import oerich.nlputils.tokenize.DefaultWordTokenizer;
 import oerich.nlputils.tokenize.ITokenizer;
 
-
 public class NewBayesianClassifier implements ILearningClassifier {
 
 	/**
@@ -53,6 +52,8 @@ public class NewBayesianClassifier implements ILearningClassifier {
 	private Map<String, Double> wordBayesValue = new HashMap<String, Double>();
 
 	private File file;
+
+	private boolean isAutosave = true;
 
 	public NewBayesianClassifier() throws IOException {
 	}
@@ -97,7 +98,7 @@ public class NewBayesianClassifier implements ILearningClassifier {
 		recalculateBayesValues();
 	}
 
-	private void storeToFile() throws IOException {
+	public void storeToFile() throws IOException {
 		BufferedWriter w = new BufferedWriter(new FileWriter(this.file));
 
 		w.write("thingsInClass=" + this.thingsInClass);
@@ -293,7 +294,7 @@ public class NewBayesianClassifier implements ILearningClassifier {
 	public void setStemmer(IStemmer stemmer) {
 		this.stemmer = stemmer;
 	}
-	
+
 	@Override
 	public void learnNotInClass(String text) {
 		// remember the amount of things in class:
@@ -325,7 +326,8 @@ public class NewBayesianClassifier implements ILearningClassifier {
 			wordBayesValue.put(word, bayesValue);
 		}
 		try {
-			storeToFile();
+			if (this.isAutosave)
+				storeToFile();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -382,12 +384,12 @@ public class NewBayesianClassifier implements ILearningClassifier {
 		this.wordBayesValue.clear();
 		storeToFile();
 	}
-	
-	public void setProClassBias(double i){
+
+	public void setProClassBias(double i) {
 		this.proClassBias = i;
 	}
-	
-	public double getProClassBias(){
+
+	public double getProClassBias() {
 		return this.proClassBias;
 	}
 
@@ -398,6 +400,9 @@ public class NewBayesianClassifier implements ILearningClassifier {
 	public void setUnknownWordValue(double unknownWordValue) {
 		this.unknownWordValue = unknownWordValue;
 	}
-	
-	
+
+	public void setAutosave(boolean isAutosave) {
+		this.isAutosave = isAutosave;
+	}
+
 }
