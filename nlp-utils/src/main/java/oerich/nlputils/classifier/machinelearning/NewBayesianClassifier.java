@@ -197,7 +197,7 @@ public class NewBayesianClassifier implements ILearningClassifier {
 	}
 
 	private String[] prepareText(String text) {
-		String[] words = this.tokenizer.tokenize(text);
+		String[] words = this.tokenizer.tokenize(getStemmer().stemmText(text));
 
 		return this.filter.filterStopWords(words);
 	}
@@ -272,9 +272,7 @@ public class NewBayesianClassifier implements ILearningClassifier {
 
 	private void increaseWordFrequency(String text,
 			Map<String, Integer> wordFrequencyMap) {
-		String[] words = this.tokenizer.tokenize(text);
-		// if stemmer is set, apply it:
-		words = getStemmer().stemmWords(words);
+		String[] words = prepareText(text);
 		for (String w : words) {
 			Integer i = wordFrequencyMap.get(w);
 			if (i == null)

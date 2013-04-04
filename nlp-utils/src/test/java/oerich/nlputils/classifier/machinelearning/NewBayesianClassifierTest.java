@@ -53,7 +53,7 @@ public class NewBayesianClassifierTest {
 	}
 
 	@Test
-	public void seriousTest() {
+	public void seriousTest() throws NLPInitializationException {
 
 		classifier.learnInClass("User logs in with username and password.");
 		classifier.learnInClass("User sends private data via internet.");
@@ -74,7 +74,7 @@ public class NewBayesianClassifierTest {
 	}
 
 	@Test
-	public void testOnesidedTraining() {
+	public void testOnesidedTraining() throws NLPInitializationException {
 
 		classifier.learnInClass("User logs in with username and password.");
 		classifier.learnInClass("User sends private data via internet.");
@@ -93,7 +93,7 @@ public class NewBayesianClassifierTest {
 	}
 
 	@Test
-	public void testIsMatch() {
+	public void testIsMatch() throws IllegalArgumentException, Exception {
 		assertEquals(classifier.getMatchValue(), 0.9, 0.01);
 
 		classifier.setMatchValue(0.8);
