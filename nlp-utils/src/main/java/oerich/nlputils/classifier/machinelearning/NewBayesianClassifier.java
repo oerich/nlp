@@ -226,19 +226,23 @@ public class NewBayesianClassifier implements ILearningClassifier {
 			words = this.wordBayesValue.keySet().toArray(new String[0]);
 		}
 
-		String[] columns = { "Word", "Probability" };
-		Object[][] data = new Object[words.length][2];
+		String[] columns = { "Word", "F_in", "F_nin", "Probability" };
+		Object[][] data = new Object[words.length][4];
 		for (int i = 0; i < words.length; i++) {
 			String word = words[i];
 			data[i][0] = word;
-			data[i][1] = getBayesValueFor(word);
+			data[i][1] = this.wordsInClass.get(word);
+			data[i][2] = this.wordsNotInClass.get(word);
+			data[i][3] = getBayesValueFor(word);
 		}
 
 		return new DefaultTableModel(data, columns) {
 			private static final long serialVersionUID = 1L;
 
 			public Class<?> getColumnClass(int column) {
-				if (column > 0)
+				if (column == 1 || column == 2)
+					return Integer.class;
+				if (column == 3)
 					return Double.class;
 				return String.class;
 			};
