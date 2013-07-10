@@ -7,7 +7,6 @@ import java.util.Locale;
 
 import oerich.nlputils.tokenize.AbstractTokenizerAdapter;
 
-
 /**
  * Klasse stellt einen Adapter auf den Java BreakIterator dar, mit gesetzter
  * deutscher Lokale. Die genaue Funktionsweise ist unbekannt. Der BreakIterator
@@ -31,9 +30,7 @@ public class SimpleSentenceBoundaryDetector extends AbstractTokenizerAdapter {
 	 * 
 	 */
 	public SimpleSentenceBoundaryDetector(Locale language) {
-
 		this.detector = BreakIterator.getSentenceInstance(language);
-
 	}
 
 	/**
@@ -43,10 +40,8 @@ public class SimpleSentenceBoundaryDetector extends AbstractTokenizerAdapter {
 	public String[] tokenize(String text) throws IllegalArgumentException {
 
 		if (text == null) {
-
 			throw new IllegalArgumentException(
 					"Übergabeparameter text darf nicht null sein.");
-
 		}
 
 		this.detector.setText(text);
@@ -56,11 +51,9 @@ public class SimpleSentenceBoundaryDetector extends AbstractTokenizerAdapter {
 		int nextSentenceStart;
 
 		while ((nextSentenceStart = this.detector.next()) != BreakIterator.DONE) {
-
 			sentence = text.substring(lastPosition, nextSentenceStart);
 			sentenceList.add(sentence);
 			lastPosition = nextSentenceStart;
-
 		}
 
 		return sentenceList.toArray(new String[] {});
