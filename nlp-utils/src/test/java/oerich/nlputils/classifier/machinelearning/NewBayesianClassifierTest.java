@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 
 import javax.swing.table.TableModel;
 
@@ -236,5 +237,24 @@ public class NewBayesianClassifierTest {
 				.isMatch("A CND may use the CNG to access NGN services."));
 		assertTrue(classifier
 				.isMatch("A CPN-user or external NGN user attempting to invoke a CNG-mediated service, including transparent routing, shall be identified and authenticated by the CNG before being granted access to the service."));
+	}
+	
+	@Test
+	public void testBayesianRule() throws IOException {
+		NewBayesianClassifier classifier = new NewBayesianClassifier();
+		classifier.setAutosave(false);
+		classifier.setProClassBias(1);
+		classifier.learnInClass("a b b");
+		classifier.learnNotInClass("a c");
+		
+		assertEquals(0.5, classifier.getBayesValueFor("a"),0.001);
+		assertEquals(1, classifier.getBayesValueFor("b"),0.001);
+		assertEquals(0, classifier.getBayesValueFor("c"),0.001);
+		
+		classifier.learnNotInClass("b c");
+		
+		assertEquals(0.667, classifier.getBayesValueFor("a"),0.001);
+		assertEquals(0.8, classifier.getBayesValueFor("b"),0.001);
+		assertEquals(0, classifier.getBayesValueFor("c"),0.001);
 	}
 }

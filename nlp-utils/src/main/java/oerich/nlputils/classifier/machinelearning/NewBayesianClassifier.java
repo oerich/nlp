@@ -26,8 +26,8 @@ import oerich.nlputils.tokenize.ITokenizer;
 public class NewBayesianClassifier implements ILearningClassifier {
 
 	/**
-	 * This constant increases the weight of the fact that a word was found in a
-	 * security relevant requirement.
+	 * This constant increases the weight of the fact that a word was found in
+	 * the class.
 	 */
 	private static final int PRO_CLASS_BIAS = 2;
 
@@ -185,7 +185,7 @@ public class NewBayesianClassifier implements ILearningClassifier {
 		return ret;
 	}
 
-	private Double getBayesValueFor(String word) {
+	Double getBayesValueFor(String word) {
 		Double bayesianVal = this.wordBayesValue.get(word);
 		if (bayesianVal == null)
 			return this.unknownWordValue;
@@ -226,14 +226,37 @@ public class NewBayesianClassifier implements ILearningClassifier {
 			words = this.wordBayesValue.keySet().toArray(new String[0]);
 		}
 
-		String[] columns = { "Word", "F_in", "F_nin", "Probability" };
-		Object[][] data = new Object[words.length][4];
+		String[] columns = { "Word", "F_in", "F_nin", "Probability",
+				"Confidence", "Support" };
+		Object[][] data = new Object[words.length][6];
+
+		int maxSupport = 0;
 		for (int i = 0; i < words.length; i++) {
 			String word = words[i];
+			int in = 0;
+			if (this.wordsInClass.containsKey(word))
+				in = this.wordsInClass.get(word);
+			int nin = 0;
+			if (this.wordsNotInClass.containsKey(word))
+				nin = this.wordsNotInClass.get(word);
+			double confidence = Math.max((double) in / (in + nin), (double) nin
+					/ (in + nin));
+			int support = Math.max(in, nin);
+
+			if (support > maxSupport)
+				maxSupport = support;
+
 			data[i][0] = word;
-			data[i][1] = this.wordsInClass.get(word);
-			data[i][2] = this.wordsNotInClass.get(word);
+			data[i][1] = in;
+			data[i][2] = nin;
 			data[i][3] = getBayesValueFor(word);
+			data[i][4] = confidence;
+			data[i][5] = support;
+		}
+
+		// Normalize the data
+		for (int i = 0; i < words.length; i++) {
+			data[i][5] = (Integer) data[i][5] / (double) maxSupport;
 		}
 
 		return new DefaultTableModel(data, columns) {
@@ -242,7 +265,7 @@ public class NewBayesianClassifier implements ILearningClassifier {
 			public Class<?> getColumnClass(int column) {
 				if (column == 1 || column == 2)
 					return Integer.class;
-				if (column == 3)
+				if (column >= 3)
 					return Double.class;
 				return String.class;
 			};
