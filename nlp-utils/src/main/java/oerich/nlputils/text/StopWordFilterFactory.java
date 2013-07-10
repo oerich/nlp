@@ -45,7 +45,7 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 			// reader = new BufferedReader(new FileReader(NLPProperties
 			// .getInstance().getStopwordFilePath()));
 			reader = new BufferedReader(new InputStreamReader(
-					new FileInputStream(NLPProperties.getInstance()
+					getClass().getResourceAsStream(NLPProperties.getInstance()
 							.getStopwordFilePath()), Charset.forName("UTF-8")));
 			String line = "";
 
@@ -61,7 +61,7 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 			// reader = new BufferedReader(new FileReader(NLPProperties
 			// .getInstance().getStopsignsFilePath()));
 			reader = new BufferedReader(new InputStreamReader(
-					new FileInputStream(NLPProperties.getInstance()
+					getClass().getResourceAsStream(NLPProperties.getInstance()
 							.getStopsignsFilePath()), Charset.forName("UTF-8")));
 			line = "";
 
@@ -130,7 +130,8 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 			// BufferedReader reader = new BufferedReader(new
 			// FileReader(filename));
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
-					new FileInputStream(filename), Charset.forName("UTF-8")));
+					StopWordFilterFactory.class.getResourceAsStream(filename),
+					Charset.forName("UTF-8")));
 			String line = "";
 
 			while ((line = reader.readLine()) != null) {
