@@ -2,6 +2,7 @@ package oerich.nlputils.text;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.LinkedList;
@@ -127,8 +128,8 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 		try {
 			DefaultWordTokenizer ret = new DefaultWordTokenizer();
 			List<String> stopsigns = new LinkedList<String>();
-			// BufferedReader reader = new BufferedReader(new
-			// FileReader(filename));
+//			 BufferedReader reader = new BufferedReader(new
+//			 FileReader(filename));
 			BufferedReader reader = new BufferedReader(new InputStreamReader(
 					StopWordFilterFactory.class.getResourceAsStream(filename),
 					Charset.forName("UTF-8")));
@@ -143,8 +144,9 @@ public final class StopWordFilterFactory extends AbstractTokenizerAdapter
 		} catch (Exception e) {
 			System.err.println(StopWordFilterFactory.class.getSimpleName()
 					+ ": Could not read file " + filename
-					+ ". NULL_TOKENIZER returned.");
+					+ ". NULL_TOKENIZER returned. " + e.getMessage());
 			e.printStackTrace();
+			
 		}
 		return NULL_TOKENIZER;
 	}
